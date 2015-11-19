@@ -5,11 +5,19 @@ $(document).ready(function() {
 
     var getBackground = function() {
 
+        var dims = '';
+
+        // var winHeight = window.innerHeight;
+        // var winWidth = window.innerWidth;
+        // if(winHeight > winWidth && winWidth < 481){
+        //     dims = '/h_' + winHeight;
+        // }
+
         var backgrounds = [
-            'http://res.cloudinary.com/durmsaznb/image/upload/v1447941063/bg3_cvqyli.jpg',
-            'http://res.cloudinary.com/durmsaznb/image/upload/v1447941062/bg2_lsi3a0.jpg',
-            'http://res.cloudinary.com/durmsaznb/image/upload/v1447941062/bg4_p1m2ox.jpg',
-            'http://res.cloudinary.com/durmsaznb/image/upload/v1447941062/bg1_mfjutf.jpg'
+            'http://res.cloudinary.com/durmsaznb/image/upload' + dims + '/bg3_cvqyli.jpg',
+            'http://res.cloudinary.com/durmsaznb/image/upload' + dims + '/bg2_lsi3a0.jpg',
+            'http://res.cloudinary.com/durmsaznb/image/upload' + dims + '/bg4_p1m2ox.jpg',
+            'http://res.cloudinary.com/durmsaznb/image/upload' + dims + '/bg1_mfjutf.jpg'
         ];
 
         var num = 1;
