@@ -57,7 +57,25 @@
 			<!-- The content block should contain the body of your template's content-->
 			{{{body}}}
 		</div>
-		<div id="footer"></div>
+		<div id="footer">
+			{{# each navLinks}}
+				<div class="{{#ifeq ../section key}}footer-item active{{else}}footer-item{{/ifeq}}">
+					<a href="{{ href }}"><h3 class="text-center">{{ label }}</h3></a>
+				</div>
+			{{/each}}
+			<!--div class="footer-item">
+				<a href="/"><h3 class="text-center">Home</h3></a>
+			</div>
+			<div class="footer-item">
+				<a href="/"><h3 class="text-center">Action</h3></a>
+			</div>
+			<div class="footer-item">
+				<a href="/"><h3 class="text-center">Blog</h3></a>
+			</div>
+			<div class="footer-item">
+				<a href="/"><h3 class="text-center">About</h3></a>
+			</div-->
+		</div>
 		{{!--
 			//- jQuery 1.11.1 is included by default, and required by both Bootstrap
 			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
