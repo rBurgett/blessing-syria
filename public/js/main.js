@@ -6,10 +6,10 @@ $(document).ready(function() {
     var getBackground = function() {
 
         var backgrounds = [
-            'bg1.jpg',
-            'bg2.jpg',
-            'bg3.jpg',
-            'bg4.jpg'
+            'http://res.cloudinary.com/durmsaznb/image/upload/v1447941063/bg3_cvqyli.jpg',
+            'http://res.cloudinary.com/durmsaznb/image/upload/v1447941062/bg2_lsi3a0.jpg',
+            'http://res.cloudinary.com/durmsaznb/image/upload/v1447941062/bg4_p1m2ox.jpg',
+            'http://res.cloudinary.com/durmsaznb/image/upload/v1447941062/bg1_mfjutf.jpg'
         ];
 
         var num = 1;
@@ -19,12 +19,15 @@ $(document).ready(function() {
             if(num > 0 && num < backgrounds.length + 1) {
                 break;
             }
+            if(i === 499) {
+                num = 1;
+            }
         }
 
         return backgrounds[num - 1];
 
     };
 
-    $('body').css('background-image', 'url("/images/backgrounds/' + getBackground() + '")');
+    $('body').css('background-image', 'url("' + getBackground() + '")');
 
 });
